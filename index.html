@@ -299,7 +299,7 @@
 <main class="sheet">
 
   <div class="masthead">
-    <div><strong>{{APP_NAME}}</strong> — Bills Reminder</div>
+    <div><strong>SubioTracker</strong> — Bills Reminder</div>
     <div>iOS · Privacy Policy</div>
   </div>
 
@@ -309,7 +309,7 @@
     <p class="dateline rise">Effective 6 August 2026 · Last updated 6 August 2026</p>
     <div class="stamp" role="img" aria-label="Stamp: no data collected">
       No data<br>collected
-      <span>{{APP_NAME}}</span>
+      <span>SubioTracker</span>
     </div>
   </header>
 
@@ -363,14 +363,14 @@
     <section>
       <span class="tag">01 — Who this covers</span>
       <h2>About this policy</h2>
-      <p>{{APP_NAME}}: Bills Reminder ("the app") helps you keep track of recurring bills and subscriptions and reminds you before they are due. This policy explains what happens to your information when you use the app.</p>
-      <p>By using {{APP_NAME}}, you agree to this policy. If you don't agree with it, please don't use the app.</p>
+      <p>SubioTracker: Bills Reminder ("the app") helps you keep track of recurring bills and subscriptions and reminds you before they are due. This policy explains what happens to your information when you use the app.</p>
+      <p>By using SubioTracker, you agree to this policy. If you don't agree with it, please don't use the app.</p>
     </section>
 
     <section>
       <span class="tag">02 — What we collect</span>
       <h2>We don't collect your data</h2>
-      <p>{{APP_NAME}} does not collect, store, or transmit personal information to us. We run no analytics, no tracking SDKs, no advertising networks, and no profiling of any kind.</p>
+      <p>SubioTracker does not collect, store, or transmit personal information to us. We run no analytics, no tracking SDKs, no advertising networks, and no profiling of any kind.</p>
       <p>Everything you enter — bill names, amounts, due dates, billing cycles, categories, notes, and reminder settings — is stored locally on your device. If you have iCloud enabled, that data may be backed up to your own iCloud account under Apple's terms. We have no access to it.</p>
       <div class="note">
         Because your bills live on your device, uninstalling the app removes them. Keep a device or iCloud backup if you want to restore them later.
@@ -393,7 +393,7 @@
     <section>
       <span class="tag">04 — Payments</span>
       <h2>In-app purchases</h2>
-      <p>{{APP_NAME}} offers optional in-app purchases. All payments are processed by Apple through the App Store. Your card details, billing address, and payment history never pass through the app and are never visible to us.</p>
+      <p>SubioTracker offers optional in-app purchases. All payments are processed by Apple through the App Store. Your card details, billing address, and payment history never pass through the app and are never visible to us.</p>
       <p>The app only receives a receipt from Apple confirming whether a purchase is active, so it can unlock the corresponding features. Refunds, subscription management, and cancellations are handled by Apple in <em>Settings → your name → Subscriptions</em>.</p>
     </section>
 
@@ -406,7 +406,7 @@
     <section>
       <span class="tag">06 — Advertising</span>
       <h2>No ads, ever</h2>
-      <p>{{APP_NAME}} contains no advertising and no ad identifiers. We do not use the Advertising Identifier (IDFA), and the app never presents the App Tracking Transparency prompt because it does not track you across apps or websites.</p>
+      <p>SubioTracker contains no advertising and no ad identifiers. We do not use the Advertising Identifier (IDFA), and the app never presents the App Tracking Transparency prompt because it does not track you across apps or websites.</p>
     </section>
 
     <section>
@@ -424,7 +424,7 @@
     <section>
       <span class="tag">08 — Children</span>
       <h2>Children's privacy</h2>
-      <p>{{APP_NAME}} is not directed at children under 13, and we do not knowingly collect information from them. As the app collects no personal data at all, no such information can be gathered through normal use.</p>
+      <p>SubioTracker is not directed at children under 13, and we do not knowingly collect information from them. As the app collects no personal data at all, no such information can be gathered through normal use.</p>
     </section>
 
     <section>
@@ -436,7 +436,7 @@
     <section>
       <span class="tag">10 — Updates</span>
       <h2>Changes to this policy</h2>
-      <p>If the app's privacy practices change, this page will be updated and the effective date at the top revised. Material changes will be announced in the app before they take effect. Continuing to use {{APP_NAME}} after an update means you accept the revised policy.</p>
+      <p>If the app's privacy practices change, this page will be updated and the effective date at the top revised. Material changes will be announced in the app before they take effect. Continuing to use SubioTracker after an update means you accept the revised policy.</p>
     </section>
 
   </div>
@@ -451,25 +451,9 @@
 </main>
 
 <footer>
-  <span>{{APP_NAME}} — Bills Reminder</span>
+  <span>SubioTracker — Bills Reminder</span>
   <span>© 2026 · All rights reserved</span>
 </footer>
-
-<script src="app-config.js"></script>
-<script>
-  (function () {
-    var walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT);
-    var node;
-    while ((node = walker.nextNode())) {
-      if (node.nodeValue.indexOf('{{APP_NAME}}') !== -1) {
-        node.nodeValue = node.nodeValue.split('{{APP_NAME}}').join(APP_NAME);
-      }
-    }
-    document.querySelectorAll('a[href^="mailto:"]').forEach(function (a) {
-      a.href = a.href.replace('{{APP_NAME}}', encodeURIComponent(APP_NAME));
-    });
-  })();
-</script>
 
 </body>
 </html>
