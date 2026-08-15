@@ -1,0 +1,264 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Support — Halloween Photo Booth AR</title>
+<meta name="description" content="Get help with Halloween Photo Booth AR: FAQs, bug reporting, and feature requests." />
+<style>
+  :root {
+    --bg-base: #0a0b0f;
+    --bg-gradient-top: #171b24;
+    --bg-gradient-bottom: #090a0e;
+    --bg-card: #12141a;
+    --bg-glass: rgba(255, 255, 255, 0.06);
+    --border-hairline: rgba(255, 255, 255, 0.1);
+    --border-default: #232631;
+    --accent-sky: #7dd3fc;
+    --text-primary: #f2f4f8;
+    --text-muted: #9aa1ad;
+    --text-disabled: #5c6270;
+  }
+
+  * { box-sizing: border-box; }
+
+  html, body {
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    background: linear-gradient(180deg, var(--bg-gradient-top) 0%, var(--bg-gradient-bottom) 55%, var(--bg-base) 100%);
+    background-color: var(--bg-base);
+    color: var(--text-primary);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  main {
+    max-width: 680px;
+    margin: 0 auto;
+    padding: clamp(32px, 6vw, 72px) clamp(20px, 5vw, 24px) 96px;
+  }
+
+  .eyebrow {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--accent-sky);
+    margin: 0 0 12px;
+  }
+
+  h1 {
+    font-size: clamp(28px, 5vw, 36px);
+    line-height: 1.2;
+    font-weight: 700;
+    margin: 0 0 8px;
+    letter-spacing: -0.01em;
+  }
+
+  .intro {
+    font-size: 16px;
+    color: var(--text-primary);
+    margin: 8px 0 32px;
+  }
+
+  .contact-card {
+    background: var(--bg-glass);
+    border: 1px solid var(--border-hairline);
+    border-radius: 14px;
+    padding: 20px 22px;
+    margin: 0 0 44px;
+  }
+
+  .contact-card .label {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin: 0 0 6px;
+  }
+
+  .contact-card a {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--accent-sky);
+    text-decoration: none;
+  }
+
+  .contact-card a:hover,
+  .contact-card a:focus-visible {
+    text-decoration: underline;
+  }
+
+  .contact-card .note {
+    font-size: 13px;
+    color: var(--text-muted);
+    margin: 6px 0 0;
+  }
+
+  h2.group {
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin: 0 0 20px;
+  }
+
+  .faq {
+    margin: 0 0 48px;
+  }
+
+  .faq-item {
+    margin: 0 0 24px;
+  }
+
+  .faq-item:last-child {
+    margin-bottom: 0;
+  }
+
+  .faq-item h3 {
+    font-size: 15px;
+    font-weight: 700;
+    margin: 0 0 6px;
+  }
+
+  .faq-item p {
+    font-size: 15px;
+    color: var(--text-muted);
+    margin: 0;
+  }
+
+  section {
+    margin: 0 0 40px;
+  }
+
+  section h2 {
+    font-size: 18px;
+    font-weight: 700;
+    margin: 0 0 10px;
+  }
+
+  section p {
+    font-size: 15px;
+    color: var(--text-muted);
+    margin: 0 0 14px;
+  }
+
+  ol {
+    margin: 0;
+    padding-left: 20px;
+  }
+
+  ol li {
+    font-size: 15px;
+    color: var(--text-muted);
+    margin: 0 0 6px;
+  }
+
+  footer {
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 24px clamp(20px, 5vw, 24px) 64px;
+    border-top: 1px solid var(--border-default);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 20px;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  footer nav {
+    display: flex;
+    gap: 20px;
+  }
+
+  footer a {
+    color: var(--text-muted);
+    font-size: 13px;
+    text-decoration: none;
+  }
+
+  footer a:hover,
+  footer a:focus-visible {
+    color: var(--text-primary);
+  }
+
+  footer .brand {
+    color: var(--text-disabled);
+    font-size: 13px;
+  }
+
+  a { color: var(--accent-sky); }
+</style>
+</head>
+<body>
+<main>
+  <p class="eyebrow">Halloween Photo Booth AR</p>
+  <h1>Support</h1>
+  <p class="intro">Running into an issue with Halloween Photo Booth AR? Here's how to get help.</p>
+
+  <div class="contact-card">
+    <p class="label">Email</p>
+    <a href="mailto:yassine.chara@gmail.com">yassine.chara@gmail.com</a>
+    <p class="note">We aim to respond within 2-3 business days.</p>
+  </div>
+
+  <h2 class="group">Frequently Asked Questions</h2>
+  <div class="faq">
+    <div class="faq-item">
+      <h3>The AR filters aren't tracking my face correctly. What can I do?</h3>
+      <p>Make sure you're in a well-lit space with your face fully visible to the camera, then try repositioning or restarting the App. If it still doesn't track, force-quit and relaunch the App.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Can I use the App without an internet connection?</h3>
+      <p>Yes — camera capture, AR filters, your gallery, and editing all work fully offline. You only need a connection to share content externally.</p>
+    </div>
+    <div class="faq-item">
+      <h3>How do I change the App's language?</h3>
+      <p>Go to Settings → Language and choose from English, Spanish, French, Japanese, or German.</p>
+    </div>
+    <div class="faq-item">
+      <h3>How do I delete my photos or videos?</h3>
+      <p>Open the Gallery tab, select the item, and choose Delete. This only removes it from your device — we never had a copy anywhere else.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Does the App collect my personal data?</h3>
+      <p>No. The App has no accounts and collects no analytics or tracking data. See our <a href="privacy.html">Privacy Policy</a> for full details.</p>
+    </div>
+    <div class="faq-item">
+      <h3>How do I delete all my data?</h3>
+      <p>Everything the App stores lives on your device, so deleting the App removes all of it.</p>
+    </div>
+  </div>
+
+  <section>
+    <h2>Reporting a Bug</h2>
+    <p>Please include the following when you email us:</p>
+    <ol>
+      <li>Your device model and iOS version</li>
+      <li>Steps to reproduce the issue</li>
+      <li>What you expected to happen vs. what actually happened</li>
+      <li>A screenshot or screen recording, if possible</li>
+    </ol>
+  </section>
+
+  <section>
+    <h2>Feature Requests</h2>
+    <p>We welcome ideas for new filters, features, or improvements — send them to the email above.</p>
+  </section>
+</main>
+
+<footer>
+  <span class="brand">Halloween Photo Booth AR</span>
+  <nav>
+    <a href="privacy.html">Privacy Policy</a>
+    <a href="mailto:yassine.chara@gmail.com">Contact</a>
+  </nav>
+</footer>
+</body>
+</html>
