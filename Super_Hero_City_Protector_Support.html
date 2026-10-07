@@ -1,0 +1,211 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#faf9f5;color:#141413}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Super Hero City Protector Support</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&family=Source+Sans+3:wght@400;600&display=swap">
+<style>
+/* Layout: one readable column; contact card first, then FAQ as expandable rows, then a bug-report checklist */
+:root {
+  --bg: #f6f8fb;
+  --surface: #ffffff;
+  --fg: #16202e;
+  --muted: #55627a;
+  --line: #d9e0ea;
+  --accent: #1f4fd8;
+  --accent-soft: #e6edfd;
+  --note-bg: #fff4d6;
+  --note-fg: #5a4300;
+  --font-display: "Bricolage Grotesque", "Segoe UI", system-ui, sans-serif;
+  --font-body: "Source Sans 3", "Segoe UI", system-ui, sans-serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0f1520;
+    --surface: #161e2c;
+    --fg: #e6ebf3;
+    --muted: #9aa8bf;
+    --line: #26324a;
+    --accent: #7ea2ff;
+    --accent-soft: #1b2a4d;
+    --note-bg: #3a2f10;
+    --note-fg: #f3d98a;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0f1520;
+  --surface: #161e2c;
+  --fg: #e6ebf3;
+  --muted: #9aa8bf;
+  --line: #26324a;
+  --accent: #7ea2ff;
+  --accent-soft: #1b2a4d;
+  --note-bg: #3a2f10;
+  --note-fg: #f3d98a;
+  color-scheme: dark;
+}
+
+body {
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--font-body);
+  font-size: 17px;
+  line-height: 1.6;
+  padding-inline: 16px;
+  padding-block: 32px 64px;
+}
+main { max-width: 46rem; margin-inline: auto; display: flex; flex-direction: column; gap: 32px; }
+h1, h2 { font-family: var(--font-display); line-height: 1.15; text-wrap: balance; margin: 0; }
+h1 { font-size: clamp(1.9rem, 5vw, 2.6rem); font-weight: 700; }
+h2 { font-size: 1.35rem; font-weight: 600; }
+p { margin: 0; }
+a { color: var(--accent); text-underline-offset: 3px; }
+a:focus-visible, summary:focus-visible, button:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; border-radius: 4px; }
+
+header { display: flex; flex-direction: column; gap: 10px; }
+.label { font-size: 0.78rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent); font-weight: 600; }
+.lead { color: var(--muted); }
+
+.contact { background: var(--accent-soft); border-radius: 10px; padding: 20px; display: flex; flex-direction: column; gap: 10px; }
+.email-row { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; }
+.email { font-weight: 600; font-size: 1.1rem; user-select: all; overflow-wrap: anywhere; min-width: 0; }
+button.copy { font: inherit; font-size: 0.9rem; font-weight: 600; color: var(--accent); background: var(--surface); border: 1px solid var(--line); border-radius: 6px; padding: 4px 12px; cursor: pointer; }
+.reply { color: var(--muted); font-size: 0.95rem; }
+.note { background: var(--note-bg); color: var(--note-fg); border-radius: 8px; padding: 12px 14px; font-size: 0.97rem; }
+
+section { display: flex; flex-direction: column; gap: 12px; padding-top: 28px; border-top: 1px solid var(--line); }
+.faq { display: flex; flex-direction: column; border: 1px solid var(--line); border-radius: 8px; background: var(--surface); }
+details { border-bottom: 1px solid var(--line); }
+details:last-child { border-bottom: 0; }
+summary { cursor: pointer; padding: 14px 16px; font-weight: 600; list-style: none; display: flex; justify-content: space-between; gap: 12px; align-items: baseline; }
+summary::-webkit-details-marker { display: none; }
+summary::after { content: "+"; color: var(--accent); font-weight: 600; font-size: 1.2rem; line-height: 1; flex: none; }
+details[open] summary::after { content: "\2212"; }
+.answer { padding: 0 16px 16px; display: flex; flex-direction: column; gap: 8px; color: var(--fg); }
+.answer ul, .answer ol { margin: 0; padding-left: 1.2rem; display: flex; flex-direction: column; gap: 4px; }
+ul.checks { margin: 0; padding-left: 1.2rem; display: flex; flex-direction: column; gap: 6px; }
+footer { color: var(--muted); font-size: 0.9rem; }
+</style>
+
+<main>
+  <header>
+    <span class="label">Support</span>
+    <h1>Super Hero City Protector</h1>
+    <p class="lead">Need help with the game? Start with the answers below. If you are still stuck, send us a message and we will get back to you.</p>
+  </header>
+
+  <div class="contact">
+    <h2>Contact us</h2>
+    <div class="email-row">
+      <span class="email" id="email">playerapex49@gmail.com</span>
+      <button class="copy" id="copy" type="button">Copy address</button>
+    </div>
+    <p class="reply">We read every message and usually reply within a few days.</p>
+  </div>
+
+  <section>
+    <h2>Common questions</h2>
+    <div class="faq">
+      <details>
+        <summary>The game will not open or closes by itself</summary>
+        <div class="answer">
+          <p>Try these steps in order:</p>
+          <ol>
+            <li>Close the game completely and open it again.</li>
+            <li>Restart your phone or tablet.</li>
+            <li>Make sure the device has free storage (at least 1 GB is a good margin) and the latest system update.</li>
+            <li>Update the game to the newest version from the App Store or Google Play.</li>
+          </ol>
+          <p>The game runs in landscape. The iPhone and iPad version needs iOS 15 or later.</p>
+        </div>
+      </details>
+      <details>
+        <summary>Ads are not showing, or a reward video did not give me my reward</summary>
+        <div class="answer">
+          <p>Ads need an internet connection and can take a few seconds to load. If a reward video does not appear, wait a moment and try again. Ads are sometimes not available for your region or at that time.</p>
+          <p>If you watched a full reward video and did not receive the reward, send us a message with your device model and roughly when it happened.</p>
+        </div>
+      </details>
+      <details>
+        <summary>I want to change my ad tracking choice</summary>
+        <div class="answer">
+          <ul>
+            <li><strong>iPhone and iPad:</strong> Settings &rarr; Privacy &amp; Security &rarr; Tracking, then switch the game on or off.</li>
+            <li><strong>Android:</strong> Settings &rarr; Privacy &rarr; Ads, then reset your advertising ID or turn off personalization (the path varies by device).</li>
+          </ul>
+          <p>You will still see ads if you opt out, but they will be less relevant to you.</p>
+        </div>
+      </details>
+      <details>
+        <summary>I lost my progress after reinstalling or changing phones</summary>
+        <div class="answer">
+          <p>Your progress is saved on your device only. The game has no accounts or cloud save, so deleting the game or moving to a new device starts you from the beginning. Keep the game installed to keep your progress.</p>
+        </div>
+      </details>
+      <details>
+        <summary>The game is slow or choppy</summary>
+        <div class="answer">
+          <ul>
+            <li>Close other apps running in the background.</li>
+            <li>Let a hot device cool down. Phones slow themselves down when they overheat.</li>
+            <li>Turn on Low Power Mode only if you do not mind lower performance. Turning it off helps.</li>
+            <li>Older devices may run the game at lower smoothness. Tell us your model and we will look into it.</li>
+          </ul>
+        </div>
+      </details>
+      <details>
+        <summary>Is the game free? What age is it for?</summary>
+        <div class="answer">
+          <p>The game is free to play and supported by ads, with optional reward videos. It is intended for players aged 13 and over and includes cartoon fantasy action.</p>
+        </div>
+      </details>
+      <details>
+        <summary>What information does the game collect?</summary>
+        <div class="answer">
+          <p>The game has no accounts and does not ask for personal details. Our advertising partner, Google AdMob, collects some device and ad data to show and measure ads. The Privacy Policy lists exactly what and how to control it.</p>
+        </div>
+      </details>
+    </div>
+  </section>
+
+  <section>
+    <h2>Reporting a problem</h2>
+    <p>The fastest way for us to fix a bug is a clear message. Please include:</p>
+    <ul class="checks">
+      <li>Your device model (for example, iPhone 13 or Pixel 7).</li>
+      <li>The system version (iOS or Android number).</li>
+      <li>The game version, shown on the App Store or Google Play page.</li>
+      <li>What you were doing when it happened, and which level you were on.</li>
+      <li>A screenshot or screen recording, if you can.</li>
+    </ul>
+    <p>Suggestions for new features and levels are welcome too.</p>
+  </section>
+
+  <footer>&copy; 2026 Yassine. Super Hero City Protector.</footer>
+</main>
+
+<script>
+(function () {
+  var btn = document.getElementById('copy');
+  var email = document.getElementById('email');
+  btn.addEventListener('click', function () {
+    var text = email.textContent;
+    function selectText() {
+      var r = document.createRange();
+      r.selectNodeContents(email);
+      var s = window.getSelection();
+      s.removeAllRanges();
+      s.addRange(r);
+      btn.textContent = 'Press copy to finish';
+    }
+    try {
+      navigator.clipboard.writeText(text).then(function () {
+        btn.textContent = 'Copied';
+        setTimeout(function () { btn.textContent = 'Copy address'; }, 1800);
+      }, selectText);
+    } catch (e) { selectText(); }
+  });
+})();
+</script>
+
+</body></html>
